@@ -4,8 +4,10 @@
 package net.sjrx.plugin.scratch.dom;
 
 import com.intellij.util.xml.DomElement;
+import com.intellij.util.xml.GenericDomValue;
+import com.intellij.util.xml.NameValue;
 
-public interface Obj extends DomElement {
+@NameValue
+public interface Obj extends GenericDomValue {
 
-	String getId();
 }

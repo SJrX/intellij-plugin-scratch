@@ -4,6 +4,8 @@
 package net.sjrx.plugin.scratch.dom;
 
 import com.intellij.util.xml.DomElement;
+import com.intellij.util.xml.GenericDomValue;
 
-public interface Ref extends DomElement {
+
+public interface Ref extends GenericDomValue {
 }
