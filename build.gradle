@@ -1,0 +1,55 @@
+import org.gradle.internal.os.OperatingSystem
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+}
+
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.4.8'
+}
+
+
+repositories {
+
+   
+
+    mavenCentral()
+    jcenter()
+}
+
+group 'net.sjrx.plugin.scratch'
+version "0.0.0"
+
+
+intellij {
+    version '2019.1'
+
+    // Probably turn this off on CI (see  https://github.com/JetBrains/gradle-intellij-plugin/blob/master/README.md#infrastructure-properties)
+}
+
+patchPluginXml {
+    changeNotes """
+    <h3>Initial release</h3>
+"""
+}
+
+// If you want to open commerce you need more RAM.
+runIde.maxHeapSize = "2048m";
+
+if(OperatingSystem.current().isLinux()) {
+    /**
+     * This setting controls how IntelliJ looks on linux, if you explore idea64.vmoptions you will see
+     * these options included in the file.
+     *
+     * When the runIde task is being executed however it doesn't go through those files, and so the fonts end up looking like garbage.
+     */
+    runIde.environment("_JAVA_OPTIONS", "-Dawt.useSystemAAFontSettings=lcd -Dsun.java2d.renderer=sun.java2d.marlin.MarlinRenderingEngine")
+}
+
+
+// Can't get Jenkins credentials secret file to work.
+

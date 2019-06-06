@@ -1,0 +1,26 @@
+<idea-plugin>
+	<id>net.sjrx.plugin.scratch</id>
+	<name>Scratch</name>
+	<version>0.0.1</version>
+
+	<vendor>Test</vendor>
+	<description>Scratch HRM NOUTEH NEOTUH UTOENHUEONT HUTOEN NTOEU TNHUOE </description>
+
+	<change-notes>
+		<!-- From gradle, this section must be 40 characters long, so here you go -->0123456789012345678901234567890123456789
+	</change-notes>
+
+	<idea-version since-build="191.4212.41"/>
+
+	<extensions defaultExtensionNs="com.intellij">
+		<dom.fileMetaData rootTagName="root" implementation="net.sjrx.plugin.scratch.TestFileDescription"/>
+
+
+	</extensions>
+	<!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+	  on how to target different products -->
+	<depends>com.intellij.modules.lang</depends>
+	<depends>com.intellij.modules.xml</depends>
+	<depends>com.intellij.modules.java</depends>
+
+</idea-plugin>

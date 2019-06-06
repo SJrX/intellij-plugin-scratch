@@ -1,0 +1,16 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+/build
+buildSrc/.gradle
+buildSrc/build
+
+out/
+
+.idea
+*.iml
+
+gradle.properties
+test-projects/*/.m2/repository
+test-projects/**/target
